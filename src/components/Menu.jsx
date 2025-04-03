@@ -72,7 +72,7 @@ function Menu() {
               </motion.li>
             ))}
             <motion.button
-            onClick={handleGithubClick}
+              onClick={handleGithubClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="ml-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md shadow-lg hover:shadow-xl transition-all"
@@ -115,6 +115,7 @@ function Menu() {
               </motion.li>
             ))}
             <motion.button
+              onClick={handleGithubClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="max-w-14 ml-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md shadow-lg hover:shadow-xl transition-all place-self-center"

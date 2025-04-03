@@ -54,7 +54,7 @@ function Home() {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-xl transition-all shadow-lg"
               >
-                <FiDownload /> Download CV
+                <FiDownload /><a href="../../public/assets/documents/" download="#">Download CV</a> 
               </motion.button>
               
               <motion.button 
@@ -62,7 +62,7 @@ function Home() {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center gap-2 border border-gray-300 bg-white text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 hover:border-blue-400 transition-all shadow-sm"
               >
-                <FiMail /> Let's Talk
+                <FiMail /> <a href="mailto:antoinnetrajean@gmail.com">Let's Talk</a>
               </motion.button>
             </motion.div>
           </motion.div>
