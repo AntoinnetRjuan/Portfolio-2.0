@@ -13,7 +13,7 @@ import java from '../../public/java.svg'
 import { motion } from 'framer-motion'
 function MyCompetence() {
   return (
-    <div className="sm:pt-24 md:pt-0">
+    <div className="mt-16 md:mt-16">
       <div className="flex flex-col lg:flex-row p-4 sm:p-6 md:p-12 lg:p-24 gap-6 md:gap-12 lg:gap-24 items-center sm:mt-10 md:mt-4 lg:mt-0">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent w-full lg:w-auto">
           .My Skills
