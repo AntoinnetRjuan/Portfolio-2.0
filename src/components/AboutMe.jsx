@@ -4,7 +4,7 @@ import moi from '../../public/Aj.jpeg'
 
 function AboutMe() {
   return (
-    <div className='flex flex-col lg:flex-row p-4 sm:p-6 md:p-12 lg:p-24 gap-6 md:gap-12 lg:gap-24 items-center'>
+    <div className='flex flex-col mt-16 md:mt-0 lg:flex-row p-4 sm:p-6 md:p-12 lg:p-24 gap-6 md:gap-12 lg:gap-24 items-center'>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
