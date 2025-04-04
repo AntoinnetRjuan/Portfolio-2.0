@@ -16,7 +16,7 @@ function MyCompetence() {
     <div>
       <div className="flex flex-col lg:flex-row p-4 sm:p-6 md:p-12 lg:p-24 gap-6 md:gap-12 lg:gap-24 items-center sm:mt-10 md:mt-4 lg:mt-0">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent w-full lg:w-auto">
-          .My Competence
+          .My Skills
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
