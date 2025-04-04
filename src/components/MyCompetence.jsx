@@ -52,6 +52,12 @@ function MyCompetence() {
           <div className="absolute bottom-80 -left-0 w-24 h-24 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 -z-10"></div>
           <div className="absolute -bottom-80 left-64 w-24 h-84 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 -z-10"></div>
           <div className="absolute lg:-bottom-full lg:left-95 md:left-14 sm:left-6 lg:w-84 md:w-28 sm:w-24 lg:h-84 md:h-28 sm:h-24 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 -z-10"></div>
+          <div className="text-2xl mt-96 font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent w-full lg:w-auto">Langues:
+            <div className='flex flex-col gap-2 text-gray-300 text-sm'>
+              <span className='ml-10'>English</span>
+              <span className='ml-10'>French</span>
+            </div>
+          </div>
         </motion.div>
 
         <div className="w-full lg:w-1/2">
