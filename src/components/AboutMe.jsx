@@ -45,7 +45,7 @@ function AboutMe() {
           <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 -z-10"></div>
         </div>
       </motion.div>
-      <div className="absolute bottom-10 w-84 h-10 rounded-full sm:hidden md:left-3 bg-gradient-to-r from-blue-500 to-orange-400 -z-10"></div>
+      <div className="absolute bottom-10 w-84 h-10 rounded-full sm:hidden md:left-3 bg-gradient-to-r from-blue-500 to-orange-300 -z-10"></div>
     </div>
   )
 }
