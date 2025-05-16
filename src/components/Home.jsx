@@ -54,7 +54,7 @@ function Home() {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-xl transition-all shadow-lg"
               >
-                <FiDownload /><a href="/RATSARAFARA JEAN ANTOINNET.pdf" download="Antoinnet.pdf">Download CV</a> 
+                <FiDownload /><a href="/Antoinnet.pdf" download="Antoinnet.pdf">Download CV</a> 
               </motion.button>
               
               <motion.button 
