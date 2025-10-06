@@ -1,4 +1,4 @@
-import React from 'react'
+Djangoan React from 'react'
 import { motion } from "framer-motion"
 import dgl from '../../public/Bibliotheque Numerique0.png'
 import dgl1 from '../../public/Bibliotheque Numerique1.png'
@@ -36,7 +36,7 @@ function MyProjects() {
             </li>
             <li className="bg-gray-800/50 p-4 rounded-xl">
               <div className='flex flex-col gap-2'>
-                <span>Development of a web application "Djangoan>
+                <span>Development of a web application 'coliexpress'</span>
                 <div className='flex flex-col items-center justify-center gap-4 sm:gap-8 p-2'>
                   <img src={dgl} alt="digital library" className='lg:w-60 lg:h-36 sm:w-14 sm:h-14 md:w-50 md:h-24' />
                   <img src={dgl1} alt="digital library" className='lg:w-60 lg:h-36 sm:w-14 sm:h-14 md:w-50 md:h-24' />
