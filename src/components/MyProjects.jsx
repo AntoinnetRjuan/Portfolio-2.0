@@ -34,6 +34,16 @@ function MyProjects() {
                 }. It is built using Django for the backend and React for the frontend.</p>
               </div>
             </li>
+            <li className="bg-gray-800/50 p-4 rounded-xl">
+              <div className='flex flex-col gap-2'>
+                <span>Development of a web application "Djangoan>
+                <div className='flex flex-col items-center justify-center gap-4 sm:gap-8 p-2'>
+                  <img src={dgl} alt="digital library" className='lg:w-60 lg:h-36 sm:w-14 sm:h-14 md:w-50 md:h-24' />
+                  <img src={dgl1} alt="digital library" className='lg:w-60 lg:h-36 sm:w-14 sm:h-14 md:w-50 md:h-24' />
+                </div>
+                <p className='text-sm sm:text-base text-gray-400'>This project is a web application that allows user to follow their colis and chat with the driver. It is built using node js for backend and React for the frontend.</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
