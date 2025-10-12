@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import dgl from "public/Bibliotheque Numerique0.png"
-import dgl1 from "public/Bibliotheque Numerique1.png"
-import colis from "public/colis.png"
+import dgl from "../../public/Bibliotheque Numerique0.png"
+import dgl1 from "../../public/Bibliotheque Numerique1.png"
+import colis from "../../public/colis.png"
 function MyProjects() {
   return (
     <div>
