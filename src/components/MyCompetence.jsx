@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import python from '../../public/python.png'
 import django from '../../public/django.png'
 import mysql from '../../public/mysql.svg'
@@ -7,110 +8,225 @@ import htmlEtCss from '../../public/coding.png'
 import reactLogo from '../../public/atom.png'
 import tailwind from '../../public/tailwind.svg'
 import js from '../../public/js.png'
-import skills from '../../public/skills.jpg'
 import sharp from '../../public/c-sharp.svg'
 import java from '../../public/java.svg'
-import { motion } from 'framer-motion'
+
+const skillGroups = [
+  {
+    category: 'Backend',
+    color: 'from-indigo-600 to-violet-600',
+    glow: 'hover:shadow-indigo-500/20',
+    level: 85,
+    description: 'Proficient in Python and Django for robust backend development',
+    tools: [
+      { src: python, alt: 'Python', name: 'Python' },
+      { src: django, alt: 'Django', name: 'Django' },
+    ],
+    extras: ['RESTful APIs', 'Microservices'],
+  },
+  {
+    category: 'Frontend',
+    color: 'from-cyan-500 to-blue-500',
+    glow: 'hover:shadow-cyan-500/20',
+    level: 75,
+    description: 'Building modern UIs with React, Tailwind and vanilla JS',
+    tools: [
+      { src: htmlEtCss, alt: 'HTML/CSS', name: 'HTML/CSS' },
+      { src: js, alt: 'JavaScript', name: 'JavaScript' },
+      { src: reactLogo, alt: 'React', name: 'React' },
+      { src: tailwind, alt: 'TailwindCSS', name: 'Tailwind' },
+    ],
+    extras: [],
+  },
+  {
+    category: 'Databases',
+    color: 'from-violet-600 to-purple-600',
+    glow: 'hover:shadow-violet-500/20',
+    level: 70,
+    description: 'Experience with relational databases for data-driven applications',
+    tools: [
+      { src: mysql, alt: 'MySQL', name: 'MySQL' },
+      { src: sqlserver, alt: 'SQL Server', name: 'SQL Server' },
+    ],
+    extras: ['Query Optimization'],
+  },
+  {
+    category: 'OOP Languages',
+    color: 'from-orange-500 to-amber-500',
+    glow: 'hover:shadow-orange-500/20',
+    level: 65,
+    description: 'Object-oriented programming with C# and Java',
+    tools: [
+      { src: java, alt: 'Java', name: 'Java' },
+      { src: sharp, alt: 'C#', name: 'C#' },
+    ],
+    extras: ['Design Patterns', 'SOLID Principles'],
+  },
+]
+
+const softSkills = ['Problem Solving', 'RESTful APIs', 'Microservices Architecture', 'Team Collaboration', 'Attention to Detail', 'Fast Learner']
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+}
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] } },
+}
+
 function MyCompetence() {
   return (
-    <div className="mt-16 md:mt-16">
-      <div className="flex flex-col lg:flex-row p-4 sm:p-6 md:p-12 lg:p-24 gap-6 md:gap-12 lg:gap-24 items-center sm:mt-10 md:mt-4 lg:mt-0">
-        <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent w-full lg:w-auto">
-          .My Skills
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-base sm:text-lg text-gray-200 mt-4 mb-8 sm:mb-12 max-w-lg"
-          >
-            I am a passionate and dedicated backend developer and some Frontend as well in web development.
-            I have experience in building robust and scalable applications using modern technologies.
-          </motion.p>
-        </div>
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative w-full max-w-md">
-          <div className="absolute -top-6 -left-6 w-full h-full rounded-2xl bg-gradient-to-r from-blue-100 to-indigo-100 -z-10"></div>
-          <div className="relative rounded-xl overflow-hidden shadow-2xl">
-            <div className="aspect-square bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center h-80 rounded-full">
-              <span className="text-white text-4xl font-bold"><img src={skills} alt="Antoinnet" /></span>
-            </div>
-          </div>
-        </motion.div>
+    <div className="min-h-screen bg-[#0a0a0f] relative overflow-hidden">
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full bg-indigo-600/8 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-violet-600/8 blur-[100px]" />
       </div>
-      <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 p-4 md:p-8'>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 pt-28 pb-20">
+
+        {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent text-center lg:text-left"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-center gap-3 mb-4"
         >
-          Frameworks, Languages, Libraries and Databases
-          <div className="absolute -bottom-11 -left-0 w-80 h-24 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 -z-10"></div>
-          <div className="absolute bottom-80 -left-0 w-24 h-24 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 -z-10"></div>
-          <div className="absolute -bottom-80 left-64 w-24 h-84 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 -z-10"></div>
-          <div className="absolute lg:-bottom-full lg:left-95 md:left-14 sm:left-6 lg:w-84 md:w-28 sm:w-24 lg:h-84 md:h-28 sm:h-24 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 -z-10"></div>
-          <div className="text-2xl mt-60 font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent w-full lg:w-auto">Langues:
-            <div className='flex flex-col gap-2 text-gray-300 text-sm'>
-              <span className='ml-10'>English</span>
-              <span className='ml-10'>French</span>
-            </div>
-          </div>
+          <span className="font-mono text-indigo-400 text-sm">02.</span>
+          <span className="font-outfit text-slate-500 text-sm tracking-widest uppercase">My Skills</span>
+          <div className="flex-1 h-px bg-white/5 max-w-xs" />
         </motion.div>
 
-        <div className="w-full lg:w-1/2">
-          <ul className="space-y-6 text-sm sm:text-base md:text-lg text-gray-200">
-            <li className="bg-gray-800/50 p-4 rounded-xl">
-              <div className='flex flex-col gap-2'>
-                <span>Proficient in Python and Django for backend development</span>
-                <div className='flex flex-wrap justify-center gap-4 sm:gap-8 p-2'>
-                  <img src={python} alt="Python" className='w-12 h-12 sm:w-14 sm:h-14' />
-                  <img src={django} alt="Django" className='w-12 h-12 sm:w-14 sm:h-14' />
-                </div>
-              </div>
-            </li>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="mb-14"
+        >
+          <h2 className="font-outfit font-black text-4xl sm:text-5xl text-white mb-4">
+            Frameworks, Languages &{' '}
+            <span className="text-gradient">Technologies</span>
+          </h2>
+          <p className="text-slate-400 text-base max-w-xl">
+            Passionate backend developer with frontend knowledge — building scalable, 
+            maintainable applications with modern tech stacks.
+          </p>
+        </motion.div>
 
-            <li className="bg-gray-800/50 p-4 rounded-xl">
-              <div className='flex flex-col gap-2'>
-                <span>Knowledge of front-end technologies like HTML & CSS, React.js & TailwindCSS</span>
-                <div className='flex flex-wrap justify-center gap-4 sm:gap-6 p-2'>
-                  <img src={htmlEtCss} alt="HTML/CSS" className='w-10 h-10 sm:w-12 sm:h-12' />
-                  <img src={js} alt="JavaScript" className='w-10 h-10 sm:w-12 sm:h-12' />
-                  <img src={reactLogo} alt="React" className='w-10 h-10 sm:w-12 sm:h-12' />
-                  <img src={tailwind} alt="TailwindCSS" className='w-10 h-10 sm:w-12 sm:h-12' />
+        {/* Skill cards grid */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+        >
+          {skillGroups.map((group) => (
+            <motion.div
+              key={group.category}
+              variants={fadeUp}
+              className={`glass rounded-2xl p-6 border border-white/5 ${group.glow} hover:shadow-xl transition-all duration-300 group`}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <p className="text-xs text-slate-500 uppercase tracking-widest font-medium mb-1">Category</p>
+                  <h3 className={`font-outfit font-bold text-lg bg-gradient-to-r ${group.color} bg-clip-text text-transparent`}>
+                    {group.category}
+                  </h3>
                 </div>
+                <span className={`font-outfit font-bold text-2xl bg-gradient-to-r ${group.color} bg-clip-text text-transparent`}>
+                  {group.level}%
+                </span>
               </div>
-            </li>
 
-            <li className="bg-gray-800/50 p-4 rounded-xl">
-              <div className='flex flex-col gap-2'>
-                <span>Familiarity with databases MySQL and SQLServer</span>
-                <div className='flex flex-wrap justify-center gap-4 sm:gap-8 p-2'>
-                  <img src={mysql} alt="MySQL" className='w-12 h-12 sm:w-14 sm:h-14' />
-                  <img src={sqlserver} alt="SQL Server" className='w-12 h-12 sm:w-14 sm:h-14' />
+              {/* Progress bar */}
+              <div className="h-1.5 bg-white/5 rounded-full mb-5 overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${group.level}%` }}
+                  transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
+                  className={`h-full rounded-full bg-gradient-to-r ${group.color}`}
+                />
+              </div>
+
+              <p className="text-slate-400 text-sm mb-5">{group.description}</p>
+
+              {/* Tool logos */}
+              <div className="flex flex-wrap items-center gap-4 mb-4">
+                {group.tools.map((tool) => (
+                  <motion.div
+                    key={tool.name}
+                    whileHover={{ y: -4 }}
+                    className="flex flex-col items-center gap-1"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center p-2 hover:border-white/20 transition-all">
+                      <img src={tool.src} alt={tool.alt} className="w-7 h-7 object-contain" />
+                    </div>
+                    <span className="text-xs text-slate-500">{tool.name}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Extra tags */}
+              {group.extras.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {group.extras.map((tag) => (
+                    <span key={tag} className="text-xs px-2.5 py-1 rounded-lg bg-white/5 border border-white/8 text-slate-400">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-              </div>
-            </li>
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
 
-            <li className="bg-gray-800/50 p-4 rounded-xl">
-              <div className='flex flex-col gap-2'>
-                <span>Knowledge of object-oriented programming (OOP) principles in C# and Java</span>
-                <div className='flex flex-wrap justify-center gap-4 sm:gap-8 p-2'>
-                  <img src={java} alt="Java" className='w-12 h-12 sm:w-14 sm:h-14' />
-                  <img src={sharp} alt="C#" className='w-12 h-12 sm:w-14 sm:h-14' />
+        {/* Soft skills + Languages */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Soft skills */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="md:col-span-2 glass rounded-2xl p-6 border border-white/5"
+          >
+            <h3 className="font-outfit font-bold text-lg text-white mb-4">Other Skills</h3>
+            <div className="flex flex-wrap gap-2">
+              {softSkills.map((skill) => (
+                <motion.span
+                  key={skill}
+                  whileHover={{ scale: 1.05 }}
+                  className="text-sm px-3 py-1.5 rounded-xl bg-indigo-600/10 border border-indigo-500/20 text-indigo-300 cursor-default"
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Languages */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="glass rounded-2xl p-6 border border-white/5"
+          >
+            <h3 className="font-outfit font-bold text-lg text-white mb-4">Languages</h3>
+            <div className="flex flex-col gap-3">
+              {[
+                { flag: '🇫🇷', lang: 'French', level: 'Native' },
+                { flag: '🇬🇧', lang: 'English', level: 'Proficient' },
+              ].map(({ flag, lang, level }) => (
+                <div key={lang} className="flex items-center gap-3">
+                  <span className="text-2xl">{flag}</span>
+                  <div>
+                    <p className="text-sm font-medium text-white">{lang}</p>
+                    <p className="text-xs text-slate-500">{level}</p>
+                  </div>
                 </div>
-              </div>
-            </li>
-
-            <li className="bg-gray-800/50 p-4 rounded-xl">
-              Experience with RESTful APIs and microservices architecture
-            </li>
-            <li className="bg-gray-800/50 p-4 rounded-xl">
-              Strong problem-solving skills and attention to detail
-            </li>
-          </ul>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
