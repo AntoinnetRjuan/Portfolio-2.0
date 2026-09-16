@@ -17,7 +17,7 @@ const SOCIALS = [
   { icon: FaFacebook, href: 'https://facebook.com/antoinnet.rj.7', label: 'Facebook' },
 ];
 
-const TITLES = ['Backend Developer', 'AI Enthusiast', 'Software Engineer', 'Django & React Dev'];
+const TITLES = ['Python Full-Stack Dev', 'Backend Developer', 'Django & React Dev', 'Software Engineer & IA'];
 
 export default function HeroLanding() {
   const navigate = useNavigate();
@@ -160,9 +160,8 @@ export default function HeroLanding() {
             </motion.div>
 
             <motion.p variants={item} className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg">
-              23-year-old student at <span className="text-slate-200 font-medium">ISPM Madagascar</span>, 
-              3rd year in Information Systems, Software Engineering & AI. Passionate about building 
-              robust applications and exploring cutting-edge technologies.
+              24-year-old Python Full-Stack Developer with 4 years of experience on academic, 
+              governmental and entrepreneurial projects. Master 1 student in Software Engineering & AI at <span className="text-slate-200 font-medium">ISPM Madagascar</span>.
             </motion.p>
 
             <motion.div variants={item} className="flex flex-wrap gap-4 pt-2">
@@ -176,7 +175,7 @@ export default function HeroLanding() {
               </motion.button>
 
               <motion.a
-                href="/CV ANTOINNET.pdf"
+                href="/CV_Ratsarafara_Jean_Antoinnet-2.pdf"
                 download
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -235,8 +234,8 @@ export default function HeroLanding() {
               transition={{ delay: 0.8 }}
               className="absolute -right-4 top-8 glass rounded-2xl px-4 py-3 text-center shadow-xl"
             >
-              <p className="font-outfit font-bold text-2xl text-white">3rd</p>
-              <p className="text-xs text-slate-400">Year ISPM</p>
+              <p className="font-outfit font-bold text-2xl text-white">M1</p>
+              <p className="text-xs text-slate-400">Génie Logiciel & IA</p>
             </motion.div>
 
             {/* Floating badge — Stack */}

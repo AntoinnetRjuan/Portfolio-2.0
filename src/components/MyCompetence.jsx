@@ -10,61 +10,73 @@ import tailwind from '../../public/tailwind.svg'
 import js from '../../public/js.png'
 import sharp from '../../public/c-sharp.svg'
 import java from '../../public/java.svg'
+import typescript from '../../public/typescript.svg'
 
 const skillGroups = [
   {
     category: 'Backend',
     color: 'from-indigo-600 to-violet-600',
     glow: 'hover:shadow-indigo-500/20',
-    level: 85,
-    description: 'Proficient in Python and Django for robust backend development',
+    level: 90,
+    description: 'Python & Django backend development, scalable APIs and clean architecture',
     tools: [
       { src: python, alt: 'Python', name: 'Python' },
       { src: django, alt: 'Django', name: 'Django' },
     ],
-    extras: ['RESTful APIs', 'Microservices'],
+    extras: ['RESTful APIs', 'Architecture Logicielle', 'Conception BD', 'Microservices'],
   },
   {
     category: 'Frontend',
     color: 'from-cyan-500 to-blue-500',
     glow: 'hover:shadow-cyan-500/20',
-    level: 75,
-    description: 'Building modern UIs with React, Tailwind and vanilla JS',
+    level: 80,
+    description: 'Modern, reactive web interfaces with React, TypeScript and TailwindCSS',
     tools: [
-      { src: htmlEtCss, alt: 'HTML/CSS', name: 'HTML/CSS' },
-      { src: js, alt: 'JavaScript', name: 'JavaScript' },
       { src: reactLogo, alt: 'React', name: 'React' },
+      { src: typescript, alt: 'TypeScript', name: 'TypeScript' },
+      { src: js, alt: 'JavaScript', name: 'JavaScript' },
       { src: tailwind, alt: 'TailwindCSS', name: 'Tailwind' },
+      { src: htmlEtCss, alt: 'HTML/CSS', name: 'HTML/CSS' },
     ],
-    extras: [],
+    extras: ['Vite', 'npm Packages', 'Component Design'],
   },
   {
-    category: 'Databases',
+    category: 'Data & Databases',
     color: 'from-violet-600 to-purple-600',
     glow: 'hover:shadow-violet-500/20',
-    level: 70,
-    description: 'Experience with relational databases for data-driven applications',
+    level: 80,
+    description: 'Relational databases, data analysis and Machine Learning exploration',
     tools: [
       { src: mysql, alt: 'MySQL', name: 'MySQL' },
       { src: sqlserver, alt: 'SQL Server', name: 'SQL Server' },
     ],
-    extras: ['Query Optimization'],
+    extras: ['Pandas / NumPy', 'Scikit-Learn', 'Matplotlib', 'Streamlit'],
   },
   {
-    category: 'OOP Languages',
+    category: 'OOP & Desktop',
     color: 'from-orange-500 to-amber-500',
     glow: 'hover:shadow-orange-500/20',
-    level: 65,
-    description: 'Object-oriented programming with C# and Java',
+    level: 75,
+    description: 'Object-oriented application development with C# and Java',
     tools: [
-      { src: java, alt: 'Java', name: 'Java' },
       { src: sharp, alt: 'C#', name: 'C#' },
+      { src: java, alt: 'Java', name: 'Java' },
     ],
-    extras: ['Design Patterns', 'SOLID Principles'],
+    extras: ['WPF', 'Tkinter', 'Design Patterns', 'SOLID Principles'],
   },
 ]
 
-const softSkills = ['Problem Solving', 'RESTful APIs', 'Microservices Architecture', 'Team Collaboration', 'Attention to Detail', 'Fast Learner']
+const softSkills = [
+  'Architecture logicielle',
+  'Conception & API REST',
+  'Conception de bases de données',
+  'Analyse de données & ML',
+  'Collaboration en équipe Agile / Scrum',
+  'Gestion de version (Git & GitHub)',
+  'Postman & Tests API',
+  'Déploiement Vercel',
+  'Esprit d’analyse & Problem Solving'
+]
 
 const container = {
   hidden: {},
@@ -108,8 +120,8 @@ function MyCompetence() {
             <span className="text-gradient">Technologies</span>
           </h2>
           <p className="text-slate-400 text-base max-w-xl">
-            Passionate backend developer with frontend knowledge — building scalable, 
-            maintainable applications with modern tech stacks.
+            Python Full-Stack developer with backend mastery, REST API design, database modeling, 
+            data analysis, and modern frontend integration.
           </p>
         </motion.div>
 
@@ -214,8 +226,9 @@ function MyCompetence() {
             <h3 className="font-outfit font-bold text-lg text-white mb-4">Languages</h3>
             <div className="flex flex-col gap-3">
               {[
-                { flag: '🇫🇷', lang: 'French', level: 'Native' },
-                { flag: '🇬🇧', lang: 'English', level: 'Proficient' },
+                { flag: '🇲🇬', lang: 'Malagasy', level: 'Native' },
+                { flag: '🇫🇷', lang: 'French', level: 'Professional' },
+                { flag: '🇬🇧', lang: 'English', level: 'Elementary' },
               ].map(({ flag, lang, level }) => (
                 <div key={lang} className="flex items-center gap-3">
                   <span className="text-2xl">{flag}</span>

@@ -4,14 +4,15 @@ import { FaDownload, FaCode, FaDatabase, FaGlobe, FaGraduationCap } from 'react-
 import moi from '../../public/Aj.jpeg'
 
 const stats = [
-  { value: '3', label: 'Years Study', icon: FaGraduationCap },
-  { value: '2+', label: 'Projects Built', icon: FaCode },
-  { value: '9+', label: 'Technologies', icon: FaDatabase },
+  { value: '4', label: 'Years Exp.', icon: FaGraduationCap },
+  { value: '6+', label: 'Projects Built', icon: FaCode },
+  { value: '10+', label: 'Technologies', icon: FaDatabase },
 ]
 
 const langs = [
-  { flag: '🇫🇷', label: 'French', level: 'Native' },
-  { flag: '🇬🇧', label: 'English', level: 'Proficient' },
+  { flag: '🇲🇬', label: 'Malagasy', level: 'Native' },
+  { flag: '🇫🇷', label: 'French', level: 'Professional' },
+  { flag: '🇬🇧', label: 'English', level: 'Elementary' },
 ]
 
 const container = {
@@ -103,16 +104,13 @@ function AboutMe() {
             </motion.h2>
 
             <motion.p variants={fadeUp} className="text-slate-400 text-base sm:text-lg leading-relaxed">
-              I'm a 23-year-old student at the{' '}
-              <span className="text-slate-200 font-medium">Institut Supérieur Polytechnique de Madagascar (ISPM)</span>, 
-              currently in my 3rd year majoring in{' '}
-              <span className="text-indigo-300 font-medium">Information Systems, Software Engineering & Artificial Intelligence</span>.
+              I'm a 24-year-old Python Full-Stack Developer currently in Master 1 (M1) majoring in{' '}
+              <span className="text-indigo-300 font-medium">Informatique de Gestion, Génie Logiciel & IA</span> at the{' '}
+              <span className="text-slate-200 font-medium">Institut Supérieur Polytechnique de Madagascar (ISPM)</span>.
             </motion.p>
 
             <motion.p variants={fadeUp} className="text-slate-500 text-sm sm:text-base leading-relaxed">
-              I have a deep passion for exploring and mastering new technologies — from building 
-              robust backend systems with Python & Django to crafting modern frontends with React. 
-              Always eager to expand my knowledge in this ever-evolving field.
+              With 4 years of hands-on experience spanning academic, governmental (Ministry of Labor / MTEFOP) and entrepreneurial projects (such as Fintech and logistics), I specialize in building robust web platforms, automated workflows, and data-driven systems with Python, Django, REST APIs and React.
             </motion.p>
 
             {/* Stats */}
@@ -145,7 +143,7 @@ function AboutMe() {
             {/* CTA */}
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 pt-2">
               <motion.a
-                href="/CV ANTOINNET.pdf"
+                href="/CV_Ratsarafara_Jean_Antoinnet-2.pdf"
                 download
                 whileHover={{ scale: 1.03, boxShadow: '0 0 24px rgba(99,102,241,0.4)' }}
                 whileTap={{ scale: 0.97 }}

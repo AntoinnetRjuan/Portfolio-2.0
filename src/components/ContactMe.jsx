@@ -91,8 +91,7 @@ function ContactSection() {
             <span className="text-gradient">Together</span>
           </h2>
           <p className="text-slate-400 text-base leading-relaxed">
-            I'm currently open to freelance projects and internship opportunities. 
-            Don't hesitate to reach out — I'd love to hear from you!
+            Available for Python Developer, Backend or Full-Stack roles, as well as freelance projects and tech collaborations. Don't hesitate to reach out — I'd love to hear from you!
           </p>
         </motion.div>
 
@@ -154,7 +153,7 @@ function ContactSection() {
             <span>Antananarivo, Madagascar 🇲🇬</span>
           </div>
           <p className="text-slate-600 text-sm font-mono">
-            © 2025 <span className="text-slate-400">Jean Antoinnet Ratsarafara</span> — Built with React & Vite
+            © 2026 <span className="text-slate-400">Jean Antoinnet Ratsarafara</span> — Built with React & Vite
           </p>
         </motion.div>
       </div>

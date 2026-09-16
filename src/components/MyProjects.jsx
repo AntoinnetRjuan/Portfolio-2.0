@@ -1,56 +1,106 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaGithub, FaCircle } from 'react-icons/fa6'
+import { FaGithub, FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import dgl from '../../public/Bibliotheque Numerique0.png'
 import dgl1 from '../../public/Bibliotheque Numerique1.png'
 import colis from '../../public/colis.png'
 import paymopic from '../../public/paymopic.png'
+import skillsImg from '../../public/skills.jpg'
+import designPortfolio from '../../public/design portfolio.jpg'
 
 const projects = [
   {
     id: 1,
-    title: 'Digital Library',
-    subtitle: 'Bibliothèque Numérique',
+    title: 'FiveOnepay',
+    subtitle: 'Fintech Madagascar · Co-développeur',
     description:
-      'A web application that allows users to access all Malagasy legal texts about works and public functions. Features full-text search, category browsing, and document management.',
-    images: [dgl, dgl1],
-    stack: ['Django', 'React', 'Python', 'PostgreSQL'],
-    status: 'In Progress',
+      'Co-pilotage du développement produit et de la stratégie technique d\'une solution de paiement à Madagascar. Conception de l\'architecture back-end et des flux de traitement des transactions.',
+    images: [paymopic],
+    stack: ['Python', 'Django', 'REST API', 'PostgreSQL', 'Fintech'],
+    status: 'En cours',
     statusColor: 'text-amber-400 border-amber-400/30 bg-amber-400/10',
     dotColor: 'bg-amber-400',
+    live: 'https://fiveonepay.com/',
+    github: 'https://github.com/AntoinnetRjuan',
+    gradient: 'from-amber-600/20 to-orange-600/20',
+    border: 'hover:border-amber-500/40',
+  },
+  {
+    id: 2,
+    title: 'Bibliothèque Numérique',
+    subtitle: 'Ministère du Travail (MTEFOP)',
+    description:
+      'Portail légal gouvernemental full-stack d\'accès aux textes juridiques (travail et fonction publique) avec API REST pour la diffusion de contenus structurés, recherche et catégorisation de milliers de documents officiels.',
+    images: [dgl, dgl1],
+    stack: ['Django', 'React', 'Python', 'REST API', 'PostgreSQL'],
+    status: '2024 — 2025',
+    statusColor: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10',
+    dotColor: 'bg-emerald-400',
     github: 'https://github.com/AntoinnetRjuan',
     gradient: 'from-indigo-600/20 to-violet-600/20',
     border: 'hover:border-indigo-500/40',
   },
   {
-    id: 2,
-    title: 'ColiExpress',
-    subtitle: 'Parcel Tracking App',
+    id: 3,
+    title: 'Coliexpress',
+    subtitle: 'Plateforme Logistique',
     description:
-      'A real-time parcel tracking platform that allows users to follow their deliveries and chat directly with the driver. Built with a modern WebSocket-based messaging system.',
+      'Plateforme reliant expéditeurs et taxis-brousse pour l\'envoi de colis à Madagascar, avec suivi en temps réel par SMS ou application web. Conçu pour fluidifier le transport régional.',
     images: [colis],
-    stack: ['Node.js', 'React', 'Socket.io', 'MongoDB'],
-    status: 'Completed',
-    statusColor: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10',
-    dotColor: 'bg-emerald-400',
+    stack: ['React', 'Node.js', 'Express', 'WebSockets'],
+    status: 'En cours',
+    statusColor: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/10',
+    dotColor: 'bg-cyan-400',
+    live: 'https://taxi-colis-go.vercel.app',
     github: 'https://github.com/AntoinnetRjuan',
     gradient: 'from-cyan-600/20 to-blue-600/20',
     border: 'hover:border-cyan-500/40',
   },
   {
-    id: 3,
-    title: 'PaymoPic',
-    subtitle: 'Payment Interface',
+    id: 4,
+    title: 'TontolonAI',
+    subtitle: 'Logiciel IA Écologique · Académique',
     description:
-      'A clean and modern payment interface project focusing on user experience and intuitive design for digital transactions.',
-    images: [paymopic],
-    stack: ['React', 'JavaScript', 'CSS'],
-    status: 'Completed',
+      'Logiciel d\'intelligence artificielle permettant d\'analyser et déterminer si un environnement est stressé ou sain à partir de données écologiques.',
+    images: [skillsImg],
+    stack: ['Python', 'Streamlit', 'Scikit-Learn', 'Machine Learning'],
+    status: '2026',
+    statusColor: 'text-purple-400 border-purple-400/30 bg-purple-400/10',
+    dotColor: 'bg-purple-400',
+    github: 'https://github.com/AntoinnetRjuan',
+    gradient: 'from-purple-600/20 to-indigo-600/20',
+    border: 'hover:border-purple-500/40',
+  },
+  {
+    id: 5,
+    title: 'GUI (GitHub Stats)',
+    subtitle: 'Package npm Collaboratif',
+    description:
+      'Package npm fournissant des composants React prêts à l\'emploi et réutilisables pour afficher dynamiquement des statistiques et visualisations de profils GitHub.',
+    images: [designPortfolio],
+    stack: ['React', 'TypeScript', 'Node.js', 'npm'],
+    status: 'avr. 2025',
     statusColor: 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10',
     dotColor: 'bg-emerald-400',
+    live: 'https://gui-smoky.vercel.app/',
     github: 'https://github.com/AntoinnetRjuan',
-    gradient: 'from-violet-600/20 to-pink-600/20',
-    border: 'hover:border-violet-500/40',
+    gradient: 'from-rose-600/20 to-pink-600/20',
+    border: 'hover:border-rose-500/40',
+  },
+  {
+    id: 6,
+    title: 'Gestionnaire d\'employés',
+    subtitle: 'Application Desktop RH',
+    description:
+      'Logiciel de bureau pour la gestion du personnel et des ressources humaines : suivi des dossiers salariés, calcul de paie, gestion des congés et pointage des présences.',
+    images: [colis],
+    stack: ['C#', 'WPF', 'Tkinter', 'SQL'],
+    status: '2023 — 2024',
+    statusColor: 'text-slate-400 border-slate-400/30 bg-slate-400/10',
+    dotColor: 'bg-slate-400',
+    github: 'https://github.com/AntoinnetRjuan',
+    gradient: 'from-slate-600/20 to-zinc-600/20',
+    border: 'hover:border-slate-500/40',
   },
 ]
 
@@ -128,7 +178,19 @@ function ProjectCard({ project }) {
         </div>
 
         {/* Actions */}
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
+          {project.live && (
+            <motion.a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-sm font-medium transition-all shadow-md"
+            >
+              <FaArrowUpRightFromSquare size={13} /> Live Demo
+            </motion.a>
+          )}
           <motion.a
             href={project.github}
             target="_blank"
@@ -177,7 +239,7 @@ function MyProjects() {
             <span className="text-gradient">Built</span>
           </h2>
           <p className="text-slate-400 text-base max-w-xl">
-            A selection of projects I've built during my studies. Each one taught me something new.
+            A selection of academic, governmental, and entrepreneurial projects I've built and contributed to.
           </p>
         </motion.div>
 
